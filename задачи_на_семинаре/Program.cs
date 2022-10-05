@@ -57,7 +57,7 @@ int num2 = n % 100 /10;
 
 Console.WriteLine(num2);
 */
-
+/*
 Console.Clear();
 Console.WriteLine("Введите число, соответствующее одному из дней недели: Понедельник: 1, Вторник: 2, Среда: 3, Четверг: 4, Пятница: 5, Суббота: 6, Воскресенье: 7 ");
 int n = Convert.ToInt32(Console.ReadLine());
@@ -73,3 +73,33 @@ if (n >= 1 && n <= 5)
   Console.WriteLine("Рабочий день");
 
 
+  */
+
+/*Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет. (Можно воспользоваться нумерацией строк, но необязательно)
+
+645 -> 5
+
+78 -> третьей цифры нет
+
+32679 -> 6
+*/
+  //Задача 13
+/*
+Console.Clear();
+Console.WriteLine("Введите трехзначное число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+if (n <= 99 && n > 1000)
+Console.WriteLine("Третьей цифры нет");
+  */
+
+Console.Write("Введи число: ");
+int anyNumber = Convert.ToInt32(Console.ReadLine());
+string anyNumberText = Convert.ToString(anyNumber);
+if (anyNumberText.Length > 2){
+  Console.WriteLine("третья цифра -> " + anyNumberText[2]);
+}
+else {
+  Console.WriteLine("-> третьей цифры нет");
+}
+
+//Console.WriteLine(n > 99 ? n.ToString()[2] : '-');
