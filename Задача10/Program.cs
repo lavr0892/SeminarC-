@@ -18,5 +18,5 @@ if (n >=100 && n <=999)
 
 Console.WriteLine(n);
 
-//if (n <= 99 && n > 999)
+//if (n < 100 && n > 999)
 //Console.WriteLine("Введено не трехзначное число");
