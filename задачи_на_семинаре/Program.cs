@@ -91,7 +91,7 @@ int n = Convert.ToInt32(Console.ReadLine());
 if (n <= 99 && n > 1000)
 Console.WriteLine("Третьей цифры нет");
   */
-
+/*  
 Console.Write("Введите число: ");
 int anyNumber = Convert.ToInt32(Console.ReadLine());
 string anyNumberText = Convert.ToString(anyNumber);
@@ -101,7 +101,7 @@ if (anyNumberText.Length > 2){
 else {
   Console.WriteLine("-> третьей цифры нет");
 }
-  
+  */
 //Console.WriteLine(n > 99 ? n.ToString()[2] : '-');
 /*  
 Console.Clear();
@@ -116,3 +116,44 @@ return "n[2]";
 
 Console.WriteLine(f(n = n[2]));
 */
+
+// Семинар 2
+/* 
+Console.Write("Введите четверть: ");
+double x = Convert.ToDouble(Console.ReadLine());
+double n = x > 0 && y > 0;
+double y = x < 0 && y > 0; 
+if (x > 0 && y > 0)
+    Console.WriteLine("I");
+else if (x < 0 && y > 0)
+    Console.WriteLine("II");
+else if (x < 0 && y < 0)
+    Console.WriteLine("III");
+else
+    Console.WriteLine("IV");
+while (x == 0)
+{
+    Console.Write("Введите координату х: ");
+    x = Convert.ToDouble(Console.ReadLine());
+}
+while (y == 0)
+{
+    Console.Write("Введите координату y: ");
+    y = Convert.ToDouble(Console.ReadLine());
+}
+  */
+/* 
+Console.Write("Введите первую координату х: ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите вторую координату х: ");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите первую координату y: ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите вторую координату y: ");
+double y2 = Convert.ToDouble(Console.ReadLine());
+
+
+double n = Math.Sqrt((x2 - x1)*(x2 -x1) + (y2-y1)*(y2-y1));
+
+Console.Write(n);
+  */
