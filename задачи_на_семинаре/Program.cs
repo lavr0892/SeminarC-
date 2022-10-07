@@ -92,7 +92,7 @@ if (n <= 99 && n > 1000)
 Console.WriteLine("Третьей цифры нет");
   */
 
-Console.Write("Введи число: ");
+Console.Write("Введите число: ");
 int anyNumber = Convert.ToInt32(Console.ReadLine());
 string anyNumberText = Convert.ToString(anyNumber);
 if (anyNumberText.Length > 2){
@@ -101,5 +101,18 @@ if (anyNumberText.Length > 2){
 else {
   Console.WriteLine("-> третьей цифры нет");
 }
-
+  
 //Console.WriteLine(n > 99 ? n.ToString()[2] : '-');
+/*  
+Console.Clear();
+Console.WriteLine("Введите число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+string nText = Convert.ToString(n);
+
+string f(int n);
+  if (n <= 99)
+  return "нет третьего числа";
+return "n[2]";
+
+Console.WriteLine(f(n = n[2]));
+*/
