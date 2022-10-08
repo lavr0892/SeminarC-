@@ -157,3 +157,33 @@ double n = Math.Sqrt((x2 - x1)*(x2 -x1) + (y2-y1)*(y2-y1));
 
 Console.Write(n);
   */
+
+//Задача 19
+/*
+Console.Clear();
+Console.WriteLine("Введите пятизначное число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+string nText = Convert.ToString(n);
+if (nText = 5)
+
+
+
+if ((num[0] == num[4]) && (num[1] == num[3]))
+Console.WriteLine("Число является палиндромом");
+  */
+Console.WriteLine("Введите число: ");
+string number = Console.ReadLine();
+int size = number.Length;
+
+if (size == 5)
+{
+    if (number[0] == number[4] && number[1] == number[3])
+      Console.WriteLine($"{number} - Палиндром");
+    
+    else
+      Console.WriteLine($"{number} - Не палиндром");
+  
+}
+else
+
+    Console.WriteLine($"{number} - не является пятизначным");
