@@ -171,6 +171,7 @@ if (nText = 5)
 if ((num[0] == num[4]) && (num[1] == num[3]))
 Console.WriteLine("Число является палиндромом");
   */
+/*
 Console.WriteLine("Введите число: ");
 string number = Console.ReadLine();
 int size = number.Length;
@@ -187,3 +188,17 @@ if (size == 5)
 else
 
     Console.WriteLine($"{number} - не является пятизначным");
+  */
+// Задача про ягоды
+
+Console.Clear();
+int N = 3;
+int a = 0;
+int i = 3;
+
+for(i = 3, n < 1001, i++)
+{
+  while (a <= 1000)
+  int a = a * 3;
+}
+Console.WriteLine(a);
