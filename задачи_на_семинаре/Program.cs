@@ -1,30 +1,31 @@
-﻿
-Console.Clear();
-int[] array = {1, 7, 9, 0};
-int max = array[0];
-int max2 = array[1];
+﻿Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("Вот наш массив: ");
+PrintArray(numbers);
+int count = 0;
 
-for (int i = 0; i < array.Length; i++)
-  {
-    if(array[0] > max)
+for (int z = 0; z < numbers.Length; z++)
+if (numbers[z] % 2 == 0)
+count++;
+
+Console.WriteLine($"всего {numbers.Length} чисел, {count} из них чётные");
+
+void FillArrayRandomNumbers(int[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
     {
-      max = array[0];
-    }    
-  }
-if (max == array[0])
-  {
-    max2 = array[1];
-  }
-for(int i = 0; i < array.Length; i++)
-  {
-    if(array[0] == max)
-      if(array[1] > max2)
-        max2 = array[1];
-  }
-
-
-
-
-Console.WriteLine(max2);
-
-
+        numbers[i] = new Random().Next(100,1000);
+    }
+}
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
