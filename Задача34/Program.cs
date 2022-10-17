@@ -22,7 +22,7 @@ Console.WriteLine("Массив: ");
 PrintArray(numbers);
 
 int count = 0;
-for (int z = 0; z < numbers.Length; z++)
+for (int m = 0; m < numbers.Length; m++)
 {
     
     if (numbers[z] % 2 == 0)
