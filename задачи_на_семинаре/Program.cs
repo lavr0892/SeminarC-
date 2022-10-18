@@ -1,35 +1,39 @@
-﻿void FillArrayRondomNumbers(int[] numbers)
+﻿// Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+void FillArrayRondomNumbers(double[] numbers)
 {
     for (int i = 0; i < numbers.Length; i++)
     {
-        numbers[i] = new Random().Next(1, 100);
+        numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 100;
     }
 }
 
-void PrintArray(int[] numbers)
+void PrintArray(double[] numbers)
 {
     for(int i = 0; i < numbers.Length; i++)
     {
-        //Console.Write($"[{string.Join( ", ", numbers)}]");
        Console.Write(numbers[i] + " ");
     }
 }
 
+
 Console.WriteLine("Введите размер массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int[] numbers = new int[n];
-int sum = 0;
-
+double[] numbers = new double[n];
+double min = Int32.MaxValue;
+double max = Int32.MinValue;
 for (int i = 0; i < numbers.Length; i++)
 {
-    if(i % 2 != 0)
-    sum = sum + numbers[i];
-    else
-    break;    
+    if(numbers[i] > max)
+    max = numbers[i];
+
+    if(numbers[i] < min)
+    min = numbers[i];
 }
+
 
 FillArrayRondomNumbers(numbers);
 Console.WriteLine("Массив:");
 PrintArray(numbers);
-Console.WriteLine();
-Console.WriteLine($"Сумма элементов на нечётных позициях: {sum}");
+Console.WriteLine($"Максимальное число: {max}  Минимальное число: {min}");
+Console.WriteLine($"Разница: {max - min}");
