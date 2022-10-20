@@ -9,9 +9,9 @@
 
 void FillArray(int[] array)
 {
-    for(int i = 0; i < array.Length; i++)
-        
-    array[i] = new Random().Next(-1000, 1000);       
+    for (int i = 0; i < array.Length; i++)
+
+        array[i] = new Random().Next(-1000, 1000);
 }
 
 void PrintArray(int[] array)
@@ -29,8 +29,8 @@ int count = 0;
 FillArray(array);
 for (int i = 0; i < array.Length; i++)
 {
-    if(array[i] > 0)    
-    count++;    
+    if (array[i] > 0)
+        count++;
 }
 
 
