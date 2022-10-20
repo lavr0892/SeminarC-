@@ -23,7 +23,7 @@ b2 = Math.Abs(b2);
 k2 = Math.Abs(k2);
 
 if (y == y1)
-Console.WriteLine($"Координаты точки пересечения пересечения: y({y}), x({x})");
+    Console.WriteLine($"Координаты точки пересечения пересечения: y({y}), x({x})");
 
 else
-Console.WriteLine("Точки пересечения нет");
+    Console.WriteLine("Точки пересечения нет");
