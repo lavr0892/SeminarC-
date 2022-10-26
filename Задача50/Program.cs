@@ -30,4 +30,4 @@ PrintMatrix(matrix);
 if (n > matrix.GetLength(0) && m > matrix.GetLength(1))
     Console.WriteLine("Такого элемента нет");
 else
-    Console.WriteLine($"На данной позиции {n},{m} содержится элемент {matrix[n, m]}");
+    Console.WriteLine($"На позиции {n},{m} содержится элемент {matrix[n, m]}");
