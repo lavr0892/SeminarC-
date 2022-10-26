@@ -1,4 +1,5 @@
 ﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+ 
 void InputMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -26,3 +27,5 @@ double[,] matrix = new double[n, m];
 InputMatrix(matrix);
 Console.WriteLine("Массив:");
 PrintMatrix(matrix);
+
+
