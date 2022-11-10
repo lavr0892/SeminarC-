@@ -77,7 +77,7 @@ Console.WriteLine("Массив:");
 PrintMatrix(matrix);
  */
 
- //Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+//Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
 //Например, задан массив:
 //1 4 7 2
@@ -85,7 +85,7 @@ PrintMatrix(matrix);
 //8 4 2 4
 //Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-void InputMatrix(int[,] matrix)
+/*  void InputMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -109,3 +109,124 @@ int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество строк: ");
 int m = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[n, m];
+*/
+/* 
+void InputMatrix(double[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            int k = new Random().Next(-1, 2);
+            while (k == 0)
+                k = new Random().Next(-1, 2);
+            matrix[i, j] = Math.Round(new Random().NextDouble() * 10 * k, 3);
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+Console.Clear();
+Console.Write("Введите кол-во строк и столбцов: ");
+string[] num = Console.ReadLine().Split(' '); //ввод чисел в одну строку
+int n = int.Parse(num[0]);
+int m = int.Parse(num[1]);
+double[,] matrix = new double[n, m];
+InputMatrix(matrix);
+ */
+/*
+void InputMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(-10, 11);
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+
+void ReleaseMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(1); i++)
+    {
+        int temp = matrix[0,i];
+        matrix[0,i] = matrix[matrix.GetLength(0) - 1, i];
+        matrix[matrix.GetLength(0) -1, i] = temp;
+    }
+
+    {
+        for(int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            Console.Write($"{matrix[i,j]} \t");
+        }
+        Console.WriteLine();
+    } 
+}
+
+Console.Clear();
+Console.Write("Введите кол-во строк и столбцов: ");
+string[] num = Console.ReadLine().Split(' ');
+int n = int.Parse(num[0]);
+int m = int.Parse(num[1]);
+int[,] matrix = new int[n,m];
+Console.WriteLine("Begin: ");
+InputMatrix(matrix);
+Console.WriteLine("Result: ");
+ReleaseMatrix(matrix);
+  */
+
+void InputMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(-10, 11);
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+void ReleaseMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = i + 1; j < matrix.GetLength(1); j++)
+        {
+            int temp = matrix[i, j];
+            matrix[i, j] = matrix[j, i];
+            matrix[j, i] = temp;
+        }
+    }
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i, j]} \t");
+        }
+        Console.WriteLine();
+    }
+}
+Console.Clear();
+Console.Write("Введите кол-во строк и столбцов: ");
+string[] num = Console.ReadLine().Split(' ');
+int n = int.Parse(num[0]);
+int m = int.Parse(num[1]);
+while (n != m)
+{
+    Console.Write("Введите кол-во строк и столбцов(кол-во строк = кол-во столбцов): ");
+    num = Console.ReadLine().Split(' ');
+    n = int.Parse(num[0]);
+    m = int.Parse(num[1]);
+}
+int[,] matrix = new int[n, m];
+Console.WriteLine("Begin: \n");
+InputMatrix(matrix);
+Console.WriteLine("Result: \n");
+ReleaseMatrix(matrix);
