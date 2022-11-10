@@ -32,4 +32,3 @@ if (n > matrix.GetLength(0) && m > matrix.GetLength(1))
 else
     Console.WriteLine($"На позиции {n},{m} содержится элемент {matrix[n, m]}");
 
-    
