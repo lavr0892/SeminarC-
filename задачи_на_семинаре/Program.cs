@@ -179,7 +179,7 @@ InputMatrix(matrix);
 Console.WriteLine("Result: ");
 ReleaseMatrix(matrix);
   */
-
+/*
 void InputMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -230,3 +230,53 @@ Console.WriteLine("Begin: \n");
 InputMatrix(matrix);
 Console.WriteLine("Result: \n");
 ReleaseMatrix(matrix);
+  */
+
+
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+//(НЕ ИСПОЛЬЗОВАТЬ РЕЗУЛЬТИРУЮЩУЮ ПЕРЕМЕННУЮ)
+//M = 1; N = 15 -> 120
+//M = 4; N = 8. -> 30
+
+/*  
+int ResultNumbers(int n, int m)
+{
+
+    if (n == m)
+        return n;
+    return m + ResultNumbers(n, m - 1);
+}
+
+
+Console.Clear();
+Console.Write("Введите первое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите второе число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(ResultNumbers(m, n));
+*/
+
+
+  //Задача 68
+   
+
+
+
+
+int Akkerman(int m, int n)
+{
+    if (m == 0)
+        return n + 1;
+    if (m > 0 && n == 0)
+        return Akkerman(m - 1, 1);
+    else
+        return Akkerman(m - 1, Akkerman(m, n - 1));
+}
+
+Console.WriteLine("Введите первое положительное число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе положительное число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"A({m}, {n}) = {Akkerman(m, n)}");
