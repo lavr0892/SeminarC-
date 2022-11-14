@@ -25,14 +25,10 @@ void ProzMatrix(int[,] MatrixOne, int[,] MatrixTwo)
     for (int i = 0; i < MatrixOne.GetLength(0); i++)
     {
         for (int j = 0; j < MatrixOne.GetLength(1); j++)
-        {
             ResultMatrix[i, j] = MatrixOne[i, j] * MatrixTwo[i, j];
-            Console.Write(ResultMatrix[i, j] + " \t");
-        }
-        Console.WriteLine();
+        Console.Write(ResultMatrix[i, j] + " \t");
     }
-    
-
+    Console.WriteLine();
 }
 
 Console.Clear();
