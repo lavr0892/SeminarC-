@@ -25,9 +25,9 @@ void InputMatrix(int[,] matrix)
     {
         for (j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write(matrix[i,j] + " \t");
+                Console.Write(matrix[i,j] + " \t");
+            Console.WriteLine();
         }
-        Console.WriteLine();
     }
 }
 
@@ -38,5 +38,5 @@ Console.Write("Введите X: ");
 int x = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите Y: ");
 int y = Convert.ToInt32(Console.ReadLine());
-int[,] MatrixOne = new int[x, y];
-InputMatrix(MatrixOne);
+int[,] matrix = new int[x, y];
+InputMatrix(matrix);
